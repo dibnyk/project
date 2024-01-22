@@ -6,7 +6,7 @@ import googleapiclient.errors
 import boto3
 
 SCOPES = ["https://www.googleapis.com/auth/youtube.readonly"]
-CLIENT_SECRETS_FILE = "YOUR_CLIENT_SECRET_FILE.json"
+CLIENT_SECRETS_FILE = "project\Youtube data load\your_client_file.json"
 
 def get_authenticated_service():
     """Get authenticated YouTube API service."""
