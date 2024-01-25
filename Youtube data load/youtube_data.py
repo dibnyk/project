@@ -23,7 +23,7 @@ def fetch_playlist_data(youtube, channel_id):
 
     while True:
         request = youtube.playlists().list(
-            part="snippet,contentDetails",
+            part="snippet,contentDetails,statistics",
             channelId=channel_id,
             pageToken=response['nextPageToken'] if response else None
         )
@@ -45,7 +45,9 @@ def get_data(items):
     for dat in items:
         published_date = dat['snippet']['publishedAt']
         video_title = dat['snippet']['title']
-        dat_info = {'title': video_title, 'published_at': published_date}
+        stats_view = dat['statistics']['viewCount']
+        stats_subs = dat['statistics']['subscriberCount']
+        dat_info = {'title': video_title, 'published_at': published_date, 'viewers': stats_view, 'subscribers': stats_subs}
         data.append(dat_info)
     print(f'Finished processing {len(data)} videos.')
     return data
