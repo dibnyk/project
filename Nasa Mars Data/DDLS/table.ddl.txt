@@ -1,0 +1,30 @@
+--INBOUND TABLE DDL
+
+CREATE OR REPLACE TABLE PUBLIC.RAWZ.nasa_mars_cmea_dtl (
+  activityID VARCHAR(255),  
+  catalog VARCHAR(255),
+  startTime TIMESTAMP_TZ,
+  sourceLocation VARCHAR(255),
+  activeRegionNum INTEGER,
+  link VARCHAR(255),
+  note VARCHAR(1000), 
+  instruments VARIANT,  
+  cmeAnalyses VARIANT,
+  linkedEvents VARIANT
+);
+
+--FINAL TABLE DDL
+
+CREATE OR REPLACE TABLE PUBLIC.CNFZ.NASA_MARS_DATA (
+LOAD_DATE,
+SRC_ID,
+activityID,
+catalog,
+startTime,
+sourceLocation,
+note as dtl_cmnts,
+latitude,
+halfangle,
+speed,
+time21_5 as time_at_moment,
+)
