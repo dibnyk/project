@@ -16,15 +16,15 @@ CREATE OR REPLACE TABLE PUBLIC.RAWZ.nasa_mars_cmea_dtl (
 --FINAL TABLE DDL
 
 CREATE OR REPLACE TABLE PUBLIC.CNFZ.NASA_MARS_DATA (
-LOAD_DATE,
-SRC_ID,
-activityID,
-catalog,
-startTime,
-sourceLocation,
-note as dtl_cmnts,
-latitude,
-halfangle,
-speed,
-time21_5 as time_at_moment,
-)
+LOAD_DATE TIMESTAMP_NTZ,
+SRC_ID VARCHAR(10),
+activityID VARCHAR(255),
+catalog VARCHAR(255),
+startTime TIMESTAMP_NTZ,
+sourceLocation VARCHAR(255),
+dtl_cmnts VARCHAR(255),
+latitude NUMBER(10,2),
+LONGITUDE NUMBER(10,2),
+halfangle NUMBER(10,2),
+speed NUMBER(10,2)
+);
