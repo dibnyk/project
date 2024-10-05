@@ -16,7 +16,7 @@ processing and Snowflake for data storage and transformation.
 
 • Loading transformed data into Snowflake for further analysis 
 
-![pipeline](project/Nasa Mars Data/flow_diagram.png)
+![pipeline](https://github.com/dibnyk/project/blob/main/Nasa%20Mars%20Data/flow_diagram.png)
 
 ## NASA API
 
