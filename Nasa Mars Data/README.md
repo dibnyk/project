@@ -60,11 +60,17 @@ Snowflake RAWZ Layer: Temporary storage for the staged data in Snowflake.
 
 
 
-# NASA: MARS DATA PIPELINE
+## Technology Stack
 
-This document outlines the technical design for a data pipeline that retrieves 
-data from the NASA API, stores it in Amazon S3, loads it in Snowflake's RAWZ 
-layer, and then cleans and loads it into the final destination tables and 
-schema. The pipeline leverages AWS Lambda functions for serverless data 
-processing and Snowflake for data storage and transformation. 
+Cloud Platform: AWS 
+
+• Serverless Functions: AWS Lambda 
+
+• Scheduler: AWS Cloudwatch 
+
+• Data Storage: 
+1. Temporary: Amazon S3 
+2. Permanent: Snowflake 
+
+• SQL Scripting: SnowSQL
 
