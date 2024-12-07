@@ -2,7 +2,7 @@
 
 I’m excited to share details about my recent data engineering project: designing and implementing a Flights File Ingestion Model. This pipeline automates the ingestion and processing of flight data, ensuring a seamless flow from file upload to transformation and integration into our data warehouse.
 
-##🚀 Overview of the Architecture
+## 🚀 Overview of the Architecture
 This architecture is built with scalability, reliability, and monitoring in mind. Here’s how the data flows:
 
 ![pipeline](https://github.com/dibnyk/project/blob/main/Airline%20data%20ingestion/flights_architecture.png)
@@ -39,7 +39,7 @@ Success Path: If the process completes successfully, the pipeline outputs result
 Failure Handling: Any errors trigger a failure workflow with notifications sent via SNS for quick resolution.
 
 
-🌟 Key Highlights
+## 🌟 Key Highlights
 
 Serverless Architecture: Utilized AWS services like Lambda and Step Functions to minimize infrastructure overhead and maximize scalability.
 
@@ -50,14 +50,15 @@ Alerting Mechanism: Integrated Amazon SNS for proactive notifications on both su
 Data Warehouse Integration: Leveraged Snowflake’s power to enable rich analytics and reporting on flight data.
 
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 AWS: S3, CloudTrail, CloudWatch, Step Functions, Lambda, SNS
 
 Snowflake: Data storage and querying
 
 
-🎯 Impact
+## 🎯 Impact
+
 This ingestion model ensures:
 
 Faster Data Availability: Enables real-time insights with reduced delays.
